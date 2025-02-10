@@ -1,0 +1,12 @@
+---
+postgres:
+  database: attendance_db
+  host: 172.31.34.72
+  port: 5432
+  user: postgres
+  password: password
+
+redis:
+  host: 172.31.34.72
+  port: 6379
+  password: ""
