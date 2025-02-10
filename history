@@ -1,0 +1,55 @@
+    1  git clone git clone https://github.com/OT-MICROSERVICES/attendance-api.git
+    2  git clone https://github.com/OT-MICROSERVICES/attendance-api.git
+    3  sudo apt update
+    4  sudo apt install make
+    5  sudo apt install postgresql postgresql-contrib
+    6  sudo apt install openjdk-11-jdk
+    7  wget -O- https://repo.liquibase.com/liquibase.asc | gpg --dearmor > liquibase-keyring.gpg && cat liquibase-keyring.gpg | sudo tee /usr/share/keyrings/liquibase-keyring.gpg > /dev/null && echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/liquibase-keyring.gpg] https://repo.liquibase.com stable main' | sudo tee /etc/apt/sources.list.d/liquibase.list
+    8  sudo apt update
+    9  sudo apt install liquibase
+   10  curl -sSL https://install.python-poetry.org | python3 -
+   11  poetry --version
+   12  export PATH="$HOME/.local/bin:$PATH"
+   13  source ~/.bashrc
+   14  poetry --version
+   15  sudo add-apt-repository ppa:deadsnakes/ppa
+   16  source ~/.bashrc
+   17  sudo apt install python3.11
+   18  poetry env use python3.11
+   19  cd attendance-api/
+   20  poetry env use python3.11
+   21  python3 --version
+   22  sudo apt update
+   23  poetry install
+   24  sudo apt install -y build-essential libpq-dev
+   25  sudo apt update
+   26  poetry install
+   27  sudo apt install python3.11-dev
+   28  poetry install
+   29  rm poetry.lock
+   30  poetry install
+   31  rm poetry.lock
+   32  poetry install
+   33  sudo -i -u postgres
+   34  bash scripts/db_init.sh 
+   35  sudo -i -u postgres
+   36  sudo -u postgres psql
+   37  bash scripts/db_init.sh 
+   38  make run-migrations
+   39  poetry add gunicorn
+   40  poetry install
+    sudo vi /etc/postgresql/14/main/pg_hba.conf
+    2  sudo vi /etc/postgresql/16/main/pg_hba.conf
+    3  sudo vi /etc/postgresql/16/main/postgresql.conf 
+make run-migrations0
+   42  poetry run gunicorn app:app --log-config log.conf -b 0.0.0.0:8080
+   43  history 
+   44  history  > ../history
+
+   radis add
+    File:
+    sudo nano /etc/redis/redis.conf
+    change from 
+    bind 127.0.0.1 ::1
+    to
+    bind 0.0.0.0
